@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 4%;
+
+    --primary: 0 0% 6%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 6%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 0 0% 94%;
+    --accent-foreground: 0 0% 6%;
+
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 6%;
+
+    --radius: 9999px;
+
+    /* Google-ish rainbow accent */
+    --gradient-rainbow: linear-gradient(135deg, #4285F4 0%, #9b72cb 30%, #d96570 55%, #d96570 65%, #ffa05a 80%, #FBBC05 100%);
+    --gradient-text-rainbow: linear-gradient(135deg, #4285F4, #9b72cb, #d96570, #ffa05a, #FBBC05);
+
+    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    direction: rtl;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Heebo', sans-serif;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6, p, span, div, button, a, li, input, textarea {
+    font-family: 'Heebo', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  ::selection {
+    background: hsl(0 0% 6%);
+    color: hsl(0 0% 100%);
+  }
+}
+
+@layer utilities {
+  .text-rainbow {
+    background: var(--gradient-text-rainbow);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: rainbow-shift 8s ease infinite;
+  }
+
+  .rainbow-bar {
+    background: var(--gradient-rainbow);
+    background-size: 200% 200%;
+    animation: rainbow-shift 8s ease infinite;
+  }
+
+  .tracking-tightest {
+    letter-spacing: -0.04em;
+  }
+
+  .tracking-tighter-x {
+    letter-spacing: -0.05em;
+  }
+
+  @keyframes rainbow-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.8s var(--transition-smooth) both;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full px-5 h-11 text-sm font-medium transition-all;
+  }
+
+  .pill-dark {
+    @apply pill bg-primary text-primary-foreground hover:bg-primary/90;
+  }
+
+  .pill-light {
+    @apply pill bg-secondary text-secondary-foreground hover:bg-accent border border-border;
+  }
+
+  .pill-ghost {
+    @apply pill bg-transparent text-foreground hover:bg-secondary;
+  }
+}
