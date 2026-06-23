@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <!-- Brand rainbow gradient (matches the site gradient). Edit stops to recolor. -->
+    <linearGradient id="t-rainbow" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4285F4"/>
+      <stop offset="0.3" stop-color="#9b72cb"/>
+      <stop offset="0.6" stop-color="#d96570"/>
+      <stop offset="0.8" stop-color="#ffa05a"/>
+      <stop offset="1" stop-color="#FBBC05"/>
+    </linearGradient>
+  </defs>
+  <!-- Background tile: solid yellow. -->
+  <rect width="64" height="64" rx="14" fill="#FBBC05"/>
+  <!-- Triolla "t" glyph (from the official logo), in black. -->
+  <path transform="translate(22.95 13.1) scale(1.5) translate(-0.464604 -3.98839)" d="M10.7113 24.6835C11.1147 24.6835 11.4509 24.67 11.7198 24.6431C11.9888 24.5894 12.2577 24.5356 12.5267 24.4818V29C12.177 29.0538 11.8812 29.0941 11.6391 29.121C11.424 29.1748 11.0609 29.2017 10.5499 29.2017C8.99007 29.2017 7.59157 28.9328 6.35444 28.3949C5.1173 27.857 4.05498 27.1309 3.16747 26.2164C2.30686 25.2752 1.6345 24.1859 1.15041 22.9488C0.693205 21.6848 0.464604 20.3401 0.464604 18.9147V3.98839H5.30556V9.51515H11.5585V14.0334H5.30556V18.9147C5.30556 20.609 5.73587 21.9941 6.59648 23.0698C7.48399 24.1456 8.8556 24.6835 10.7113 24.6835Z" fill="#0F0F0F"/>
+</svg>

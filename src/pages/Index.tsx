@@ -30,8 +30,8 @@ const Index = () => {
             <span className="text-base text-foreground/80">AI Integration <span className="font-semibold">Manager</span></span>
           </div>
 
-          <h1 className="text-center text-[clamp(3rem,9vw,8.5rem)] leading-[0.95] tracking-tighter-x font-medium animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            הטמעת <span className="text-rainbow font-semibold">AI אמיתית</span>
+          <h1 className="text-center text-[clamp(3rem,9vw,8.5rem)] leading-[0.95] tracking-tighter-x font-black animate-fade-up" style={{ animationDelay: "0.1s" }}>
+            הטמעת <span className="text-rainbow font-black">AI אמיתית</span>
             <br />
             בארגון שלך.
           </h1>
